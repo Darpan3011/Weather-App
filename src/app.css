@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+.weathhead{
+    text-align: center;
+    font-size: 25px;
+    font-family: Muli;
+    margin-top: 8px;
+}
+
+.b1{
+    margin-left: 14px;
+    border: none;
+    font-family: Muli;
+    border-radius: 4px;
+    padding: 4px 14px;
+}
+
+
+.form{
+    margin-left: 14px;
+    font-family: Muli;
+}
+.form>input{
+    border: none;
+    font-family: Muli;
+}
+
+.bttn{
+    margin-left: 14px;
+    border: none;
+    font-family: Muli;
+    border-radius: 4px;
+    padding: 4px 14px
+}
+
+.winfo{
+    margin-left: 14px;
+    font-size: 25px;
+    font-family: Muli;
+}
+
+.Weath{
+    margin-left: 14px;
+    font-size: 18px;
+    font-family: Muli;
+}
