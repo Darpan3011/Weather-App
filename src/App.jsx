@@ -58,7 +58,7 @@ function App() {
           Weather information for {city}
         </div>
           <br />
-          <hr></hr><br />
+          <hr color="white"></hr><br />
         <div className="Weath">
           <div className="welement">Weather: {weather.descp}</div>
           <div className="welement">Temperature: {C.toFixed(2)} &#8451;</div>
