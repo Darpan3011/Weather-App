@@ -46,6 +46,11 @@ export default function Home() {
     setLoading(false);
   };
 
+  const handleZipCodeChange = (e) => {
+    const value = e.target.value.replace(/[^\d]/g, '');
+    setZipCode(value);
+  };
+
   return (
     <div>
       <Head>
@@ -60,6 +65,7 @@ export default function Home() {
         src={background}
         layout='fill'
         className='object-cover'
+        alt='background'
       />
 
       {/* City Search */}
@@ -91,7 +97,8 @@ export default function Home() {
           >
             <div>
               <input
-                onChange={(e) => setZipCode(e.target.value)}
+                onChange={handleZipCodeChange}
+                value={zipCode}
                 className='bg-transparent border-none text-white focus:outline-none text-2xl'
                 type='text'
                 placeholder='Enter ZIP code'
@@ -120,5 +127,3 @@ export default function Home() {
     </div>
   );
 }
-
-// fix the deplooyment
