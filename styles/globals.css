@@ -2,14 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-/* Hide the spinner (arrow controls) in Firefox */
-input[type="number"] {
-    -moz-appearance: textfield;
+body{
+    color: azure;
+    margin: 0%;
 }

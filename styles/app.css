@@ -43,3 +43,15 @@
     font-size: 18px;
     font-family: Muli;
 }
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide the spinner (arrow controls) in Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}

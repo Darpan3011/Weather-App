@@ -1,45 +1,21 @@
 import Image from 'next/image';
-import React from 'react';
 
-const Weather = ({ data }) => {
-  console.log(data);
+export default function Weather({ data }) {
   return (
-    <div className='relative flex flex-col justify-between max-w-[500px] w-full h-[90vh] m-auto p-4 text-gray-300 z-10'>
-      {/* Top */}
-      <div className='relative flex justify-between pt-12'>
-        <div className='flex flex-col items-center'>
-          <Image
-            src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
-            alt='/'
-            width='100'
-            height='100'
-          />
-          <p className='text-2xl'>{data.weather[0].main}</p>
-        </div>
-        <p className='text-9xl'>{data.main.temp.toFixed(0)}&#176;</p>
+    <div className="text-center">
+      <h2 className="text-2xl font-semibold">{data.name}, {data.sys.country}</h2>
+      <p className="text-lg">{data.weather[0].main}</p>
+      <div className="flex justify-center items-center gap-3">
+        <Image
+          src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
+          alt="Weather Icon"
+          width={80}
+          height={80}
+        />
+        <h1 className="text-5xl font-bold">{data.main.temp.toFixed(0)}°C</h1>
       </div>
-      {/* Bottom */}
-
-<div className='bg-black/50 relative p-8 rounded-md'>
-    <p className='text-2xl text-center pb-6'>Weather in {data.name}</p>
-    <div className='flex justify-between text-center'>
-        <div>
-            <p className='font-bold text-2xl'>{data.main.feels_like.toFixed(0)}&#176;</p>
-            <p className='text-xl'>Feels Like</p>
-        </div>
-        <div>
-            <p className='font-bold text-2xl'>{data.main.humidity}%</p>
-            <p className='text-xl'>Humidity</p>
-        </div>
-        <div>
-            <p className='font-bold text-2xl'>{data.wind.speed.toFixed(0)} KMPH</p>
-            <p className='text-xl'>Winds</p>
-        </div>
-    </div>
-</div>
-
+      <p className="text-sm">Wind: {data.wind.speed.toFixed(0)} km/h</p>
+      <p className="text-sm">Humidity: {data.main.humidity}%</p>
     </div>
   );
-};
-
-export default Weather;
+}
